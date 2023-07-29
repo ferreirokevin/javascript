@@ -1,12 +1,12 @@
-
 let añodenacimiento = prompt("¿En que año has nacido?");
-let numeroDecimal = mundialesvividos();
-let resultadoRedondeado = Math.floor(numeroDecimal);
+let resultado = mundialesvividos();
+let resultadoRedondeado = Math.floor(resultado);
 
 function mundialesvividos (){
-  return ((2023-añodenacimiento)/4)
+  return  (2023-añodenacimiento)/4;
 }
-alert (resultadoRedondeado) ("tu has vivido " + mundialesvividos() + " mundiales" )
+alert  ("tu has vivido " + resultadoRedondeado + " mundiales");
+
 
 
 /*if (añodenacimiento <= 1930) {
@@ -57,3 +57,25 @@ alert (resultadoRedondeado) ("tu has vivido " + mundialesvividos() + " mundiales
   alert("tu no has vivido ningun mundial");
 }
 */
+
+/*let valor1 = parseFloat(prompt("ingresa un numero"));
+let operador = prompt(
+  "ingrese un valor aritmetico: sumar(+): restar(-): multiplicar (*): o dividir(/)"
+);
+let valor2 = parseFloat(prompt("ingresa otro numero"));
+
+function resultado() {
+  if (operador === "+") {
+    return valor1 + valor2;
+  } else if (operador === "-") {
+    return valor1 - valor2;
+  } else if (operador === "*") {
+    return valor1 * valor2;
+  } else if (operador === "/") {
+    return valor1 / valor2;
+  } else {
+    return "Operador no válido";
+  }
+}
+
+parseFloat(alert("el resultado es " + resultado()));*/
