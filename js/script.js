@@ -1,11 +1,13 @@
-let añodenacimiento = prompt("¿En que año has nacido?");
+/*let añodenacimiento = prompt("¿En que año has nacido?");
 let resultado = mundialesvividos();
 let resultadoRedondeado = Math.floor(resultado);
 
 function mundialesvividos (){
   return  (2023-añodenacimiento)/4;
 }
-alert  ("tu has vivido " + resultadoRedondeado + " mundiales");
+alert  ("tu has vivido " + resultadoRedondeado + " mundiales");*/
+
+
 
 
 
@@ -58,10 +60,12 @@ alert  ("tu has vivido " + resultadoRedondeado + " mundiales");
 }
 */
 
+
+
+
+
 /*let valor1 = parseFloat(prompt("ingresa un numero"));
-let operador = prompt(
-  "ingrese un valor aritmetico: sumar(+): restar(-): multiplicar (*): o dividir(/)"
-);
+let operador = prompt("ingrese un valor aritmetico: sumar(+): restar(-): multiplicar (*): o dividir(/)");
 let valor2 = parseFloat(prompt("ingresa otro numero"));
 
 function resultado() {
@@ -79,3 +83,54 @@ function resultado() {
 }
 
 parseFloat(alert("el resultado es " + resultado()));*/
+
+
+
+
+
+/*prompt
+alert
+control f
+ciclos
+
+
+funciones
+parametros
+return
+
+
+bien linkeado el js*/
+
+
+
+
+function nuevoproducto() {
+  const productos = [{ id: "5", nombre: "papa", descripcion: "blanca" }];
+
+  const agregarProductos = () => {
+    let agregarOtroProducto = true;
+
+    while (agregarOtroProducto) {
+      const id = prompt("Ingresar el código").toLowerCase();
+      const nombre = prompt("Agregar nombre").toLowerCase();
+      const descripcion = prompt("Agregar descripción del producto").toLowerCase();
+
+      const productoExistente = productos.find((producto) => producto.id === id);
+
+      if (productoExistente) {
+        alert("El producto ya existe en la lista.");
+      } else {
+        const producto = { id, nombre, descripcion };
+        productos.push(producto);
+        alert("Producto agregado exitosamente.");
+      }
+
+      agregarOtroProducto = confirm("¿Desea agregar otro producto?");
+    }
+  }
+
+  agregarProductos();
+  console.log(productos);
+}
+
+nuevoproducto();
