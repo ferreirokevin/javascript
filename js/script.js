@@ -104,8 +104,8 @@ bien linkeado el js*/
 
 
 
-function nuevoproducto() {
-  const productos = [{ id: "5", nombre: "papa", descripcion: "blanca" }];
+/*function nuevoproducto() {
+  const productos = [];
 
   const agregarProductos = () => {
     let agregarOtroProducto = true;
@@ -126,11 +126,67 @@ function nuevoproducto() {
       }
 
       agregarOtroProducto = confirm("¿Desea agregar otro producto?");
+
     }
   }
-
+  
   agregarProductos();
-  console.log(productos);
+  console.log(productos)
+}
+nuevoproducto();*/
+
+let nombre;
+let nuevaContraseña;
+let saldo = 0;
+
+function crearCuenta(){
+  nombre = prompt("ingrese su numbre");
+  nuevaContraseña = prompt("ingrese su nueva contraseña");
+
+}
+function ingresar(){
+  const usuario = prompt("ingrese su nombre/usuario");
+  const contraseña = prompt("ingrese su contraseña");
+
+  if (usuario === nombre && contraseña === nuevaContraseña){
+    alert("Bienvenido");
+    menu();
+  } else {
+    alert("contraseña incorrecta");
+  }
 }
 
-nuevoproducto();
+function menu(){
+  alert("elige un de las siguientes opciones")
+  const opciones = Number(prompt("1-Ingresar dinero ; 2-Ver saldo ; 3-pedir un prestamo"));
+  switch (opciones){
+    case 1:
+      deposito();
+      break;
+    case 2:
+      verSaldo();
+      break;
+    case 3:
+      prestamo();
+      break;
+    default:
+      alert("Opcion incorrecta");
+      break;
+  }
+}
+
+function deposito(){
+  const nuevoMontoIngresado = Number(prompt ("Ingrese el monto a depositar"));
+  saldo += nuevoMontoIngresado
+  alert ("Ha ingresado $" + nuevoMontoIngresado);
+  menu();
+
+  
+}
+
+function verSaldo(){
+  alert("su saldo es $" + saldo)
+  menu()
+
+}
+
