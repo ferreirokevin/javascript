@@ -21,7 +21,6 @@ function ingresar() {
 
 function abrirMenu() {
   let continuar = true;
-
   while (continuar) {
     alert("Por favor, elige una de las siguientes opciones");
     const opciones = Number(prompt("1-Ingresar dinero ; 2-Ver saldo ; 3-Pedir un préstamo"));
