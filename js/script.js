@@ -24,9 +24,7 @@ function abrirMenu() {
 
   while (continuar) {
     alert("Por favor, elige una de las siguientes opciones");
-    const opciones = Number(
-      prompt("1-Ingresar dinero ; 2-Ver saldo ; 3-Pedir un préstamo")
-    );
+    const opciones = Number(prompt("1-Ingresar dinero ; 2-Ver saldo ; 3-Pedir un préstamo"));
 
     switch (opciones) {
       case 1:
@@ -66,10 +64,10 @@ function verSaldo() {
 }
 
 function prestamo() {
-  const interesPorcentaje = (155/mes);
-  const tasaMensual = 1 + interesPorcentaje / 100;
   let montoPrestamo = Number(prompt("¿Cuánto quiere pedir prestado?"));
   let mes = Number(prompt("¿En cuántos meses desea hacer la devolución?"));
+  const interesPorcentaje = ((155/12)*mes).toFixed(2);
+  const tasaMensual = 1 + interesPorcentaje / 100;
   let montoTotal = 0;
 
   alert("Su préstamo tendrá un interés mensual del " + interesPorcentaje + "% actualizado cada mes al nuevo monto");
