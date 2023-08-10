@@ -26,7 +26,7 @@ function abrirMenu() {
     alert("Por favor, elige una de las siguientes opciones");
     const opciones = Number(prompt("1-Ingresar dinero ; 2-Ver saldo ; 3-Pedir un préstamo"));
 
-    
+
     switch (opciones) {
       case 1:
         depositar();
@@ -41,7 +41,6 @@ function abrirMenu() {
         alert("Opción incorrecta, vuelve a intentarlo");
         break;
     }
-
     continuar = confirm("¿Desea realizar otra operación?");
   }
 }
