@@ -44,7 +44,6 @@ function abrirMenu() {
     continuar = confirm("¿Desea realizar otra operación?");
   }
 }
-
 function depositar() {
   const nuevoMontoIngresado = prompt("Ingrese el monto que desea depositar");
   const montoNumerico = parseFloat(nuevoMontoIngresado);
