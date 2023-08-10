@@ -46,7 +46,7 @@ function abrirMenu() {
 function depositar() {
   const nuevoMontoIngresado = prompt("Ingrese el monto que desea depositar");
   const montoNumerico = parseFloat(nuevoMontoIngresado);
-  
+
   if (!isNaN(montoNumerico)) {
     saldo += montoNumerico;
     alert("Ha ingresado $" + montoNumerico.toFixed(2));
