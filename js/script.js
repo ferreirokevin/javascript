@@ -66,7 +66,7 @@ function verSaldo() {
 }
 
 function prestamo() {
-  const interesPorcentaje = 155;
+  const interesPorcentaje = (155/mes);
   const tasaMensual = 1 + interesPorcentaje / 100;
   let montoPrestamo = Number(prompt("¿Cuánto quiere pedir prestado?"));
   let mes = Number(prompt("¿En cuántos meses desea hacer la devolución?"));
